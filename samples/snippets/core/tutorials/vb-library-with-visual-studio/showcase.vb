@@ -14,7 +14,7 @@ Module Program
             If String.IsNullOrEmpty(input) Then Return
 
             Console.WriteLine($"Input: {input} {"Begins with uppercase? ",30}: " +
-                              $"{If(input.StartsWithUpper(), "Yes", "No")} {vbCrLf}")
+                              $"{If(input.Substring(0, 1).ToUpper() = input.Substring(0, 1).ToString(), "Yes", "No")} {vbCrLf}")
         Loop While True
     End Sub
 End Module
